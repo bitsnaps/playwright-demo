@@ -3,7 +3,7 @@ image:
   
 tasks:
 - init: >
-    sudo npm install -g npm@latest
+    npm install -g npm@latest
     npm install
     npx playwright install
   command: >
