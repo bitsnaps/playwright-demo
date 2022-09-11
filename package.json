@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ouedkniss.js",
     "test": "npx playwright test --project=chromium",
     "report":"npx playwright show-report",
     "clean": "rm example.png"
