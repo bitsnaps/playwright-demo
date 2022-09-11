@@ -1,5 +1,7 @@
 # Playwright demo
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
+
 This is repo contains two type of example, the testing which you can run with `npx playwright test` to run what's in `tests` directory and it uses typescript, and a simple scrapping example in `index.js` which you can run with `npm start` and it uses the regular js syntax.
 
 ## How this project was created?
