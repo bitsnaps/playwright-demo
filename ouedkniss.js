@@ -2,23 +2,11 @@ const playwright = require('playwright');
 
 (async () => {
     const browser = await playwright.chromium.launch();
-    // const browser = await playwright.chromium.launch({
-    //     headless: true // Hide the browser. 
-    // });
     
     const page = await browser.newPage();
-    /*/ If you want to create more than one browser context or if you want to have finer control, 
-    you can create a context object and create multiple pages in that context:
-    const context = await browser.newContext();
-    const page1 = await context.newPage();
-    const page2 = await context.newPage();
-    // You may also want to handle page context in your code.
-    // It’s possible to get the browser context that the page belongs to using the page.context() function.
 
-    */
     await page.goto('https://www.ouedkniss.com/immobilier/1');
-    // await page.waitForTimeout(1000); // wait for 1 seconds
-
+    await page.waitForTimeout(500); // wait ...
 
     /*To use these selectors, the most common functions are as following:
         $eval(selector, function) – selects the first element, sends the element to the function, and the result of the function is returned;
@@ -27,7 +15,10 @@ const playwright = require('playwright');
         querySelectorAll(selector)– return all the elements.
         These methods will work correctly with both CSS and XPath Selectors.
     */
-    const items = await page.$$eval('xpath=//html/body/div[2]/div[1]/main/div/div[1]/div/div/div[2]/div/div[1]/div/div/div/div[1]', allItems => {
+   
+    
+    //const items = await page.$$eval('xpath=//html/body/div[2]/div[1]/main/div/div[1]/div/div/div[2]/div/div[1]/div/div/div/div[1]', allItems => {
+    const items = await page.$$eval('xpath=//html/body/div[2]/div[1]/main/div/div[1]/div/div/div[2]/div/div[1]/div/div/div/div[1]/node()', allItems => {
         const data = [];
         allItems.forEach(item => {
             const name = item.querySelector('h2.pt-1').innerText;
@@ -39,7 +30,10 @@ const playwright = require('playwright');
         return data;
     });
     console.log(`We've got ${items.length} item(s) here.`);
-    console.log(items[0]);
+    // console.log(items[0]);
+    items.forEach( item => {
+        console.log(item.name);
+    })
     await browser.close();
     console.log('done');
 })()
