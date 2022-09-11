@@ -1,8 +1,10 @@
 FROM gitpod/workspace-full:latest
 
-RUN sudo apt-get update
+USER root
 
-RUN sudo install-packages libatk1.0-0 \
+RUN apt-get update
+
+RUN install-packages libatk1.0-0 \
       libatk-bridge2.0-0 \                         
       libcups2 \                                   
       libdrm2 \                                    
@@ -14,3 +16,8 @@ RUN sudo install-packages libatk1.0-0 \
       libgbm1 \                                    
       libatspi2.0-0 \                              
       libwayland-client0
+
+USER gitpod
+
+RUN npm install -g npm@latest
+RUN npx playwright install
