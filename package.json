@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "npx playwright test --project=chromium",
+    "report":"npx playwright show-report",
     "clean": "rm example.png"
   },
   "keywords": [],
