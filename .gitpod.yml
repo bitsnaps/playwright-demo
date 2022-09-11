@@ -2,11 +2,10 @@ image:
   file: .gitpod.Dockerfile
   
 tasks:
-- init: >
+- init: |
     npm install -g npm@latest
     npm install
     npx playwright install
-  command: >
-    npm run start
+  command: npm run start
 
 
