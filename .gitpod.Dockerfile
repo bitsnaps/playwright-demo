@@ -20,4 +20,5 @@ RUN install-packages libatk1.0-0 \
 USER gitpod
 
 RUN npm install -g npm@latest
+RUN npm install @playwright/test
 RUN npx playwright install
