@@ -14,5 +14,3 @@ RUN sudo install-packages libatk1.0-0 \
       libgbm1 \                                    
       libatspi2.0-0 \                              
       libwayland-client0
-
-RUN sudo npm install -g npm@latest
