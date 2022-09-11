@@ -7,6 +7,9 @@ This is repo contains two type of example, the testing which you can run with `n
 ## How this project was created?
 ```bash
 npm init playwright@latest
+
+# or (if you've already existing project)
+npx playwright install
 ```
 PS. This will download (and caches) all the required browsers binaries.
 
