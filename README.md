@@ -13,7 +13,7 @@ PS. This will download (and caches) all the required browsers binaries.
 ## Run for testing
 
 By default tests will be run on all 3 browsers, chromium, firefox and webkit using 3 workers, you can specify the browser with `--project=chromium` argument.
-```
+```bash
 # Runs the end-to-end tests (recommendd to begin with)
 npx playwright test
 
@@ -37,11 +37,11 @@ npx playwright show-report
 ## Run for scrapping
 
 You'll first need to install playwright:
-```
+```bash
 npm install playwright
 ```
 Code lives in `index.js` and can be run with:
-```
+```bash
 node index.js
 ```
 or `npm start` in this demo.
