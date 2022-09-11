@@ -48,3 +48,10 @@ Code lives in `index.js` and can be run with:
 node index.js
 ```
 or `npm start` in this demo.
+
+## Code generation
+Playwright can help you to generate scrapping script using `codegen` command:
+```bash
+npx playwright codegen wikipedia.org
+```
+P.S. This won't work in automated environnement (e.g. Gitpod...).
