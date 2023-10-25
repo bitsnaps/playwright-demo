@@ -18,3 +18,12 @@ test('homepage has Playwright in title and get started link linking to the intro
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
 });
+
+
+test('open ouedkniss home page', async ({ page }) => {
+  await page.goto('https://www.ouedkniss.com/immobilier/1?regionIds=alger-16');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Immobilier/);  
+
+})

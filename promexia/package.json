@@ -1,0 +1,18 @@
+{
+  "name": "promexia",
+  "version": "1.0.0",
+  "description": "promexia testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --project=chromium",
+    "report": "npx playwright show-report"
+  },
+  "author": "Ibrahim.h",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.39.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0"
+  }
+}
